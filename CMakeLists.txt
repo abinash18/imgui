@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.6)
+
 add_library(
     imgui SHARED
     imconfig.h
@@ -12,4 +13,10 @@ add_library(
     imstb_truetype.h
     imgui_demo.cpp
     imgui_tables.cpp
+    backends/imgui_impl_glfw.cpp
+    backends/imgui_impl_glfw.h
+    backends/imgui_impl_opengl3.cpp
+    backends/imgui_impl_opengl3.h
 )
+
+target_include_directories(imgui PUBLIC backends ${CMAKE_CURRENT_SOURCE_DIR})
