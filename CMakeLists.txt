@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.6)
 
 add_library(
-    imgui STATIC
+    IMGUI STATIC
     imconfig.h
     imgui.h
     imgui.cpp
@@ -19,4 +19,4 @@ add_library(
     backends/imgui_impl_opengl3.h
 )
 
-target_include_directories(imgui PUBLIC backends ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(IMGUI PUBLIC backends ${CMAKE_CURRENT_SOURCE_DIR})
